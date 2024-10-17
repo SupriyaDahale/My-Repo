@@ -74,6 +74,7 @@ public class TC1234_CoverFox_ValidateBannerCount extends Base {
 		Assert.assertEquals(textCount, bannerCount,"text count not matching with banner count, TC failed");
 		Reporter.log("Code Changed By Amruta",true);
 		Reporter.log("Code changed By Yogendra", true);
+		Reporter.log("Code changed By Yogendra1", true);
 }
 	@AfterClass
 	public void closeApplication() {
