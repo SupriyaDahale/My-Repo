@@ -21,7 +21,6 @@ import coverFoxPOM.CoverFoxResultPage;
 import coverFoxUtility.Utility;
 
 public class TC1234_CoverFox_ValidateBannerCount extends Base {
-	
 	CoverFoxHomePage homePage;
 	CoverFoxHealthPlanPage healthPlanPage;
 	CoverFoxMemberDetailsPage memberDetailsPage;
@@ -30,16 +29,13 @@ public class TC1234_CoverFox_ValidateBannerCount extends Base {
 	String excelpath = System.getProperty("user.dir") + "\\DataSheets\\ExcelTest.xlsx";
 	String sheetName = "Sheet5";
 	public static Logger logger;
-	// open browser/open an application
 	@BeforeClass
 	public void openApplication() throws IOException {
 		launchBorwser();
 		logger=Logger.getLogger("8th_June_CoverFox");
 		PropertyConfigurator.configure("log4j.properties");
 		logger.info("opening application");
-	}
-
-	// gender,next click, age selection, pincode, mobile,nect click
+}
 	@BeforeMethod
 	public void enterDetails() throws EncryptedDocumentException, IOException, InterruptedException {
 		homePage = new CoverFoxHomePage(driver);
@@ -68,25 +64,20 @@ public class TC1234_CoverFox_ValidateBannerCount extends Base {
 		logger.info("Clicking on continue button");
 		logger.error("Please check details again");
 		Thread.sleep(3000);
-	}
-
+}
 	@Test
 	public void valiadatePolicyCount() {
 		int textCount = resultPage.getCountFromText();
 		int bannerCount = resultPage.getCountFromBanner();
 		logger.info("validiting results");
 		//Assert.fail();
-		Assert.assertEquals(textCount, bannerCount, "text count not matching with banner count, TC failed");
+		Assert.assertEquals(textCount, bannerCount,"text count not matching with banner count, TC failed");
 		Reporter.log("Code Changed By Amruta",true);
 		Reporter.log("Code changed By Yogendra", true);
-	}
-
-	// logout From application
-	// close Browser/close an application
+}
 	@AfterClass
 	public void closeApplication() {
 		logger.info("closing browser");
 		closeBrowser();
 	}
-
 }
