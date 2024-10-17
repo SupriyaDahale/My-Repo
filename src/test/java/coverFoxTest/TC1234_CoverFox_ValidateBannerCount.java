@@ -75,6 +75,7 @@ public class TC1234_CoverFox_ValidateBannerCount extends Base {
 		Reporter.log("Code Changed By Amruta",true);
 		Reporter.log("Code changed By Yogendra", true);
 		Reporter.log("Code changed By Yogendra1", true);
+		Reporter.log("Code changed By Yogendra2", true);
 }
 	@AfterClass
 	public void closeApplication() {
