@@ -74,9 +74,17 @@ public class TC1234_CoverFox_ValidateBannerCount extends Base {
 		Assert.assertEquals(textCount, bannerCount,"text count not matching with banner count, TC failed");
 		Reporter.log("Code Changed By Amruta",true);
 		Reporter.log("Code changed By Yogendra", true);
+<<<<<<< HEAD
 		Reporter.log("Code changed By Yogendra1", true);
 		Reporter.log("Code changed By Yogendra2", true);
 }
+=======
+		Reporter.log("Some changes are made", false);
+	}
+
+	// logout From application
+	// close Browser/close an application
+>>>>>>> branch 'master' of https://github.com/VelocityKatrajPune/8thJuneAutomation.git
 	@AfterClass
 	public void closeApplication() {
 		logger.info("closing browser");
